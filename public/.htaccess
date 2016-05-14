@@ -5,4 +5,4 @@ RewriteEngine on
 # Flags :
 # QSA : if there were any query string arguments, append them to the resulting url
 # L : Stop the process of the .htaccess now
-RewriteRule ^(.+)$ index.php?url=$1 [QSA, L]
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
