@@ -1,2 +1,9 @@
 RewriteEngine on
-RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+
+# Redirects everything to the public folder.
+# Might change this and append "public/" to the virtual host
+# in apache configuration.
+
+# Flag :
+# L : Stop the process of the .htaccess now
+RewriteRule ^((?!public/).*)$ public/$1 [L]

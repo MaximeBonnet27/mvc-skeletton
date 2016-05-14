@@ -1,0 +1,8 @@
+RewriteEngine on
+
+# Takes the requested URL if there's any, and put it in the query string
+
+# Flags :
+# QSA : if there were any query string arguments, append them to the resulting url
+# L : Stop the process of the .htaccess now
+RewriteRule ^(.+)$ index.php?url=$1 [QSA, L]
