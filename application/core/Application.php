@@ -25,7 +25,7 @@ class Application {
 
                 /* If no controller was found, redirect to home page */
                 if((!$this->urlController) || $this->urlController == 'index.php'){
-                        require APP . 'controller/Home.php';
+                        require_once APP . 'controller/Home.php';
                         $page = new Home();
                         $page->defaultAction();
                         exit(0);
@@ -39,7 +39,7 @@ class Application {
                 if(file_exists(APP . 'controller/' . $this->urlController . '.php')){
 
                         /* Load the right controller */
-                        require APP. 'controller/' . $this->urlController . '.php';
+                        require_once APP. 'controller/' . $this->urlController . '.php';
 
                         /* From now on, the urlController is no longer a String,
                          * but a controller object */
@@ -75,7 +75,7 @@ class Application {
                                 }
                                 /* The called method doesn't exist */
                                 else {
-                                        require APP . 'controller/Error.php';
+                                        require_once APP . 'controller/Error.php';
                                         $page = new Error();
                                         $page->badRequest();
                                 }
@@ -83,7 +83,7 @@ class Application {
                 }
                 /* The requested controller doesn't exist */
                 else {
-                        require APP . 'controller/Error.php';
+                        require_once APP . 'controller/Error.php';
                         $page = new Error();
                         $page->notFound();
                 }
