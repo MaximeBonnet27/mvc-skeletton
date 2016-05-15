@@ -39,7 +39,7 @@ class Application {
                 if(file_exists(APP . 'controller/' . $this->urlController . '.php')){
 
                         /* Load the right controller */
-                        require APP. 'controller/' . $this->urlController '.php';
+                        require APP. 'controller/' . $this->urlController . '.php';
 
                         /* From now on, the urlController is no longer a String,
                          * but a controller object */
