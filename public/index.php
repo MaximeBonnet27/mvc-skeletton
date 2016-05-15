@@ -23,16 +23,17 @@ define('APP', ROOT . 'application' . DIRECTORY_SEPARATOR);
  * Configuration
  */
 
-require APP . 'config/database_config.php';
+require APP . 'config/EnvironmentConfig.php';
+require APP . 'config/DatabaseConfig.php';
 
 /**
  * Application and Controller
  * Then, launch the application which is the entry point of our logic.
  */
 
- require APP . 'core/controller.php';
- require APP . 'core/application.php';
+ require APP . 'core/Controller.php';
+ require APP . 'core/Application.php';
 
-// $app = new Application();
+$app = new Application();
 
  ?>
