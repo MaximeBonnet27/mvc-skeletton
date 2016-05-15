@@ -14,4 +14,8 @@ parameters passed to the action. If there is no action given, call default metho
 ## File names Convention
 
 The .php files that begin with an uppercase letter are only declarative, they do not have side-effects.
-On the other hand, the .php files that begin with a lowercase display something. 
+On the other hand, the .php files that begin with a lowercase display something.
+
+## Todo
+
+- Forbid access to error pages when url is ```/error/notFound``` for instance.
