@@ -1,21 +1,13 @@
 <?php
 
-/**
- * A
- */
 abstract class Controller
 {
-
-        public function __construct(argument)
-        {
-
-        }
+        public $db = null;
 
         /**
          * Abstract method, default action
          */
-
-         public function default();
+         abstract public function default();
 }
 
 
