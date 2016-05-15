@@ -24,7 +24,7 @@ class Application {
                 $this->splitUrl();
 
                 /* If no controller was found, redirect to home page */
-                if(!$this->urlController){
+                if((!$this->urlController) || $this->urlController == 'index.php'){
                         require APP . 'controller/Home.php';
                         $page = new Home();
                         $page->defaultAction();
