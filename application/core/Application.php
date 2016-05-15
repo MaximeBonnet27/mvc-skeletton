@@ -28,6 +28,7 @@ class Application {
                         require APP . 'controller/Home.php';
                         $page = new Home();
                         $page->defaultAction();
+                        exit(0);
                 }
 
                 /* If a controller was found, change its case to first letter in uppercase, others to lowercase */
@@ -35,7 +36,7 @@ class Application {
                 $this->urlController = ucfirst($this->urlController);
 
                 /* If there were a controller called, first, need to check if such a file exists */
-                elseif(file_exists(APP . 'controller/' . $this->urlController . '.php')){
+                if(file_exists(APP . 'controller/' . $this->urlController . '.php')){
 
                         /* Load the right controller */
                         require APP. 'controller/' . $this->urlController '.php';
