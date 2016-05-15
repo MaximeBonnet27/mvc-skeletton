@@ -6,7 +6,7 @@
 class Error extends Controller
 {
 
-        public function default(){
+        public function defaultAction(){
                 $this->notFound();
         }
 

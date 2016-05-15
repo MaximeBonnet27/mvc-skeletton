@@ -25,7 +25,7 @@ class Application {
                 if(!$this->urlController){
                         require APP . 'controller/Home.php';
                         $page = new Home();
-                        $page->default();
+                        $page->defaultAction();
                 }
 
                 /* If a controller was found, change its case to first letter in uppercase, others to lowercase */
@@ -45,7 +45,7 @@ class Application {
 
                         /* If there is no action called, call the default action for this controller */
                         if(strlen($this->urlAction) == 0){
-                                $this->urlController->default();
+                                $this->urlController->defaultAction();
                         }
                         /* Check if the action called exists */
                         else {

@@ -2,9 +2,12 @@
 
 abstract class Controller
 {
-        public $db = null;
 
-         abstract public function default();
+
+        /**
+         * Abstract method, default action
+         */
+         abstract public function defaultAction();
 }
 
 
