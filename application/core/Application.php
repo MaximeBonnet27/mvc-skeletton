@@ -4,6 +4,8 @@
  * Application Class, Entry point of the web app.
  * Takes care of the URL routing, and call the right controller with the right action.
  */
+
+
 class Application {
 
         /** The controller called */
@@ -13,7 +15,7 @@ class Application {
         /** The optionnals arguments sent to the action */
         private $urlParameters = null;
 
-        public function __construct(argument) {
+        public function __construct() {
 
                 /* Find which controller + action that has been called
                  * After this call, urlController, urlAction and urlParameters are
