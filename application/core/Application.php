@@ -38,8 +38,17 @@ class Application {
                 /* If there were a controller called, first, need to check if such a file exists */
                 if(file_exists(APP . 'controller/' . $this->urlController . '.php')){
 
+                        /* Check if the use can call this controller */
+                        require_once APP . 'config/ForbiddenPagesConfig.php';
+                        if(in_array($this->urlController, $forbiddenPages)){
+                                require_once APP . 'controller/Error.php';
+                                $page = new Error();
+                                $page->forbidden();
+                                exit(0);
+                        }
+
                         /* Load the right controller */
-                        require_once APP. 'controller/' . $this->urlController . '.php';
+                        require_once APP . 'controller/' . $this->urlController . '.php';
 
                         /* From now on, the urlController is no longer a String,
                          * but a controller object */
