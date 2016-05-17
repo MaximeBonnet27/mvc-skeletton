@@ -15,6 +15,17 @@ class UserProvider extends Provider
                 return $statement->fetchAll();
         }
 
+        public function getUserById($id){
+                $query = "SELECT * FROM " . $this->USERS_TABLE . " WHERE id = :id";
+
+                $statement = $this->db->prepare($query);
+                $statement->bindValue(':id', $id);
+
+                $statement->execute();
+
+                return $statement->fetch();
+        }
+
 }
 
 

@@ -63,6 +63,8 @@ class Application {
                         else {
                                 /* If an action was found change it to lowercase if needed */
                                 $this->urlAction = strtolower($this->urlAction);
+                                /* More, add an underscore at the beginning of the name, so we can name it as we want */
+                                $this->urlAction = '_' . $this->urlAction;
 
                                 if(method_exists($this->urlController, $this->urlAction)){
 

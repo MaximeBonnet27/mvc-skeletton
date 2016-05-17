@@ -20,6 +20,10 @@ class UserService {
                 return ($this->userProvider->listUsers());
         }
 
+        public function getUserById($id){
+                return $this->userProvider->getUserById($id);
+        }
+
 }
 
 
