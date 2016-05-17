@@ -7,4 +7,7 @@ define('DB_USER', 'skeletton');
 define('DB_PASS', 'mvc');
 define('DB_CHARSET', 'utf8');
 
+define('DB_FETCH_MODE', PDO::FETCH_OBJ);
+define('DB_ERRMODE', PDO::ERRMODE_WARNING);
+
  ?>
