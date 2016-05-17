@@ -17,7 +17,7 @@ class UserService {
         }
 
         public function listUsers(){
-                return json_encode($this->userProvider->listUsers());
+                return ($this->userProvider->listUsers());
         }
 
 }
