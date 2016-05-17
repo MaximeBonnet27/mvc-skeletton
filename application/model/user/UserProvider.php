@@ -3,12 +3,13 @@
 class UserProvider extends Provider
 {
 
-        private const USERS_TABLE = "users";
+        private $USERS_TABLE = "users";
+
 
         public function listUsers(){
-                $query = "SELECT * FROM " . USERS_TABLE;
+                $query = "SELECT * FROM " . $this->USERS_TABLE;
 
-                $statement = $this->database->prepare($query);
+                $statement = $this->db->prepare($query);
                 $statement->execute();
 
                 return $statement->fetchAll();

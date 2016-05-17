@@ -3,7 +3,7 @@
 /**
  * User Data Model
  */
-class User extends {
+class User {
 
         private $id = null;
 

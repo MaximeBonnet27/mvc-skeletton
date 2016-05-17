@@ -22,7 +22,7 @@ abstract class Provider {
                         ';charset=' . DB_CHARSET,
                         DB_USER,
                         DB_PASS,
-                        $options);
+                        $dbOptions);
 
 
         }
